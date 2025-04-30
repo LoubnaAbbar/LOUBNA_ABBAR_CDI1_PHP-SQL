@@ -1,0 +1,217 @@
+
+.collection-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.collection-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.empty-collection {
+    font-style: italic;
+    color: #666;
+    padding: 20px;
+    font-family: 'Inria Serif', serif;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-artist {
+    font-size: 0.9em;
+    color: #666;
+    font-family: 'Inria Serif', serif;
+}
+
+.booster-section {
+    background-color: #EDB56C;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    color: white;
+}
+
+.booster-button {
+    background-color: white;
+    color: #EDB56C;
+    font-weight: bold;
+    margin-top: 15px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.booster-button:hover {
+    background-color: #f5f5f5;
+}
+
+.credits-display {
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.booster-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    display: none;
+    margin-top: 20px;
+}
+
+.booster-card {
+    width: 160px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: cardReveal 0.5s ease-out;
+    position: relative;
+}
+
+@keyframes cardReveal {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.booster-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.booster-card-info {
+    margin-top: 8px;
+    font-size: 0.8em;
+    font-family: 'Inria Serif', serif;
+}
+
+.add-to-collection {
+    background-color: #EDB56C;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.add-to-collection:hover {
+    background-color: #e0a85c;
+}
+
+.add-to-collection:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.common {
+    border: 2px solid #b0b0b0;
+}
+
+.rare {
+    border: 2px solid #4CAF50;
+}
+
+.epic {
+    border: 2px solid #9C27B0;
+}
+
+.rarity {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rarity.common {
+    color: #b0b0b0;
+}
+
+.rarity.rare {
+    color: #4CAF50;
+}
+
+.rarity.epic {
+    color: #9C27B0;
+}
+
+.epic {
+    animation: epicGlow 2s infinite alternate;
+}
+
+@keyframes epicGlow {
+    from { box-shadow: 0 0 5px #9C27B0; }
+    to { box-shadow: 0 0 20px #9C27B0; }
+}
+
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .booster-card {
+        width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .booster-section {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color: #f8f7f7;
+}
+
+.head {
+    max-height: 50px; 
+    max-width: 100px;
+    width: auto; 
+    height: auto; 
+}
+
+.headimg {
+    max-height: 115px; 
+    max-width: 115px;
+    width: auto; 
+    height: auto; 
+}
+
+
+
+.bodyInscription {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+form h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #EDB56C;
+}
+
+main {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #EDB56C;
+    outline: none;
+}
+
+
+form input[type="submit"] {
+    background-color: #EDB56C;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b08752;
+}
+
+#errorList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    color: red;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+fieldset label {
+    display: block;
+    margin: 5px 0;
+}
+
+
+.error {
+    border: 2px solid red !important;
+    background-color: #ffe6e6 !important;
+}
+
+.success {
+    border: 2px solid green !important;
+    background-color: #e6ffe6 !important;
+}
+
+
+
+

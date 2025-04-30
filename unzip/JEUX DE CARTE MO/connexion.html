@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Connexion - Musée d'Orsay</title>
+        <link rel="stylesheet" href="connexion.css">
+        <link rel="stylesheet" href="dark-mode.css" id="dark-mode-stylesheet" disabled>
+        <style>
+            body, body * {
+                transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            }
+        </style>
+    </head>
+<body>
+
+    <header>
+        <a href="index.html"><img class="headimg" src="image/Logo 2.png" alt=""/></a>
+        <button id="dark-mode-toggle" class="theme-toggle">
+            <span class="theme-toggle-sun">☀️</span>
+            <span class="theme-toggle-moon">🌙</span>
+        </button>
+    </header>
+    
+<div class="bodyInscription">
+
+    <main>
+        <form id="myForm" action="#">
+            <h2>Connexion</h2>
+            <ul id="errorList" style="color: red;"></ul> 
+    
+    
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+        
+            <label for="confirmPassword">Confirmez le mot de passe</label>
+            <input type="password" name="confirmPassword" id="confirmPassword">
+        
+            <fieldset>
+                <legend>Quelle est votre tableau préférée ?</legend>
+                <label><input type="radio" name="flower" value="rose"> Intérieur bleu</label>
+                <label><input type="radio" name="flower" value="tulipe"> By Lamp Light</label>
+                <label><input type="radio" name="flower" value="lys"> Evening, Interior</label>
+            </fieldset>
+        
+            <input type="submit" value="Se connecter">
+        </form>
+        
+    </main>
+
+    <script src="connexion.js" defer></script>
+    <script src="dark-mode.js" defer></script>
+</div>
+</body>
+</html>

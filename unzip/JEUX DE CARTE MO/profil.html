@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Votre profil de collectionneur de cartes d'art">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode-stylesheet">
+    <style>
+       
+        body, body * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <section class="top-page">
+        <header class="header">
+            <a href="index.html"><img src="image/Logo 2.png" alt="Logo ArtCard"></a>
+            <nav class="nav">
+                <a href="macollection.html"><li>Ma Collection</li></a>
+                <a href="connexion.html"><li class="billeterie">Déconnexion</li></a>
+            </nav>
+            <button id="dark-mode-toggle" class="theme-toggle">
+                <span class="theme-toggle-sun">☀️</span>
+                <span class="theme-toggle-moon">🌙</span>
+            </button>
+        </header>
+    </section>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <img src="image/vg.jpg" alt="Avatar" class="avatar" id="userAvatar">
+                    <button class="edit-avatar-btn">✏️</button>
+                </div>
+                <h1 id="username">Jean_Dupont</h1>
+                <p class="member-since">Membre depuis: <span id="joinDate">15 mars 2023</span></p>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalCards">147</div>
+                    <div class="stat-label">Cartes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="uniqueCards">89</div>
+                    <div class="stat-label">Œuvres uniques</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="completionRate">62%</div>
+                    <div class="stat-label">Complétion</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="userRank">#1,245</div>
+                    <div class="stat-label">Classement</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="api-integration">
+            <h2>Dernières œuvres ajoutées</h2>
+            <div class="oeuvre-filters">
+                <select id="oeuvreFilter">
+                    <option value="all">Toutes les œuvres</option>
+                    <option value="painting">Peintures</option>
+                    <option value="sculpture">Sculptures</option>
+                </select>
+                
+            </div>
+            <div class="oeuvres-grid" id="apioeuvresGrid">
+           
+            </div>
+            <div class="api-status" id="apiStatus"></div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-section">
+                <h2>Mes Informations</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Nom d'utilisateur</label>
+                        <div class="editable-field">
+                            <span id="displayUsername">Jean_Dupont</span>
+                            <button class="edit-btn">Modifier</button>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <div class="editable-field">
+                            <span id="displayEmail">jean.dupont@example.com</span>
+                            <button class="edit-btn">Modifier</button>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <label>Mot de passe</label>
+                        <div class="editable-field">
+                            <span>••••••••</span>
+                            <button class="edit-btn">Modifier</button>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <label>Préférences</label>
+                        <div class="editable-field">
+                            <span>Art moderne, Impressionnisme</span>
+                            <button class="edit-btn">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Mes Récompenses</h2>
+                <div class="badges-container">
+                    <div class="badge" data-fullname="Collectionneur débutant">
+                        <div class="badge-image-container">
+                            <img src="image/badge1.png" alt="Collectionneur débutant">
+                        </div>
+                        <p>Collectionneur débutant</p>
+                    </div>
+                    <div class="badge" data-fullname="Expert Van Gogh">
+                        <div class="badge-image-container">
+                            <img src="image/badge2.png" alt="Expert Van Gogh">
+                        </div>
+                        <p>Expert Van Gogh</p>
+                    </div>
+                    <div class="badge locked" data-fullname="Marchandage">
+                        <div class="badge-image-container">
+                            <img src="image/badge3.png" alt="Marchandage">
+                        </div>
+                        <p>Marchandage</p>
+                    </div>
+                    <div class="badge locked">
+                        <div class="badge-image-container">
+                            <img src="image/badge4.png" alt="À débloquer">
+                        </div>
+                        <p>?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Activité Récente</h2>
+                <div class="activity-log">
+                    <div class="activity-item">
+                        <div class="activity-icon">🎨</div>
+                        <div class="activity-details">
+                            <p>Vous avez obtenu <strong>La Nuit étoilée</strong> (Épique)</p>
+                            <small>Aujourd'hui, 14:32</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🔄</div>
+                        <div class="activity-details">
+                            <p>Échange avec <strong>ArtLover42</strong></p>
+                            <small>Hier, 18:45</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🎁</div>
+                        <div class="activity-details">
+                            <p>Ouverture d'un booster - 5 nouvelles cartes</p>
+                            <small>12 avril 2023</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🏆</div>
+                        <div class="activity-details">
+                            <p>Badge obtenu: <strong>Expert Van Gogh</strong></p>
+                            <small>10 avril 2023</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="#"><p>Mentions légales</p></a>
+        <a href="#"><p>Conditions d'utilisation</p></a>
+        <a href="#"><p>Contact</p></a>
+    </div>
+
+    <script src="profil.js"></script>
+    <script src="dark-mode.js" defer></script>
+</body>
+</html>

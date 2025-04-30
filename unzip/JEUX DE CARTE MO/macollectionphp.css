@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f8f7f7;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #EDB56C;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+thead {
+    background-color: #EDB56C;
+    color: white; 
+}
+
+
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #EDB56C;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #b08752;
+}
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form select:focus {
+    border-color: #EDB56C;
+    outline: none;
+}
+
+form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+form input[type="submit"] {
+    background-color: #EDB56C;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b08752;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #f8f7f7;
+}
+
+.header img {
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.header img:hover {
+    transform: scale(1.05);
+}
+
+

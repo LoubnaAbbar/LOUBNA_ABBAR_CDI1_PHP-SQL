@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collectionnez et échangez des cartes d'œuvres d'art. Ouvrez des boosters pour découvrir des chefs-d'œuvre et complétez votre collection.">
+    <title>Collection de cartes d'art</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode-stylesheet" disabled>
+    <style>
+        body, body * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="top-page">
+        <header class="header">
+            <button id="dark-mode-toggle" class="theme-toggle">
+                <span class="theme-toggle-sun">☀️</span>
+                <span class="theme-toggle-moon">🌙</span>
+            </button>
+            
+            <a href="index.html"><img src="image/Logo 2.png" alt="Logo"></a>
+            
+           
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+           
+            <div class="nav-container">
+                <nav class="nav" id="nav">
+                    <a href="macollection.html"><li>Les Collections</li></a>
+                    <a href="macollection.php"><li>Ma Collection</li></a>
+                    <a href="profil.php"><li>Profil</li></a>
+                    <a href="connexion.php"><li>Connexion</li></a>
+                    <a href="inscription.php"><li class="billeterie">Inscription</li></a>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="overlay" id="overlay"></div>
+
+        <div class="b1">
+            <img class="Backer" src="image/Visual Arts Exploring Expressionism Education Presentation in Blue Simple Illustrative Style (1366 x 443 px).png" alt="Collection de cartes d'art">
+        </div>
+        <div class="b2">
+            <article class="p2">Plonge dans l'univers fascinant de l'art en collectionnant des cartes numériques d'œuvres d'art emblématiques. Chaque carte représente une œuvre iconique que tu peux ajouter à ta collection, échanger avec d'autres collectionneurs, et ouvrir des boosters pour découvrir de nouvelles pièces uniques.
+            </article>
+            <div class="ligne-esthetique-verticale"></div>
+        </div>
+
+    </section>
+
+   
+    <div class="collection-section">
+        <h2 class="bigtitle">MA COLLECTION</h2>
+        
+        <div class="collection-container">
+            <div class="empty-collection" id="emptyCollection">
+                <p>Votre collection est vide. Ouvrez des boosters pour commencer !</p>
+            </div>
+            <div class="cards-grid" id="cardsGrid"></div>
+        </div>
+        
+        <div class="booster-section">
+            <h3>OUVRIR UN BOOSTER</h3>
+            <p>Chaque booster contient 5 cartes aléatoires d'œuvres d'art</p>
+            <button class="button booster-button" id="openBooster">Ouvrir un booster (5 crédits)</button>
+            <div class="credits-display">Crédits disponibles: <span id="creditsCount">10</span></div>
+        </div>
+        
+        <div class="booster-result" id="boosterResult"></div>
+    </div>
+
+   
+    <div class="exchange-section">
+        <h2 class="bigtitle">ÉCHANGER AVEC D'AUTRES COLLECTIONNEURS</h2>
+        <p>Proposez vos cartes en double et complétez votre collection grâce aux échanges !</p>
+        <a href=""><button class="button">Accéder au marché d'échange</button></a>
+    </div>
+
+ 
+    <div class="gallery-section">
+        <h2 class="bigtitle">GALERIE D'ŒUVRES DISPONIBLES</h2>
+        <p>Découvrez les chefs-d'œuvre que vous pouvez collectionner</p>
+        <div class="oeuvre-grid">
+            <div class="oeuvre-card">
+                <img src="image/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="La Nuit étoilée">
+                <h3>La Nuit étoilée</h3>
+                <p>Vincent van Gogh</p>
+                <span class="rarity epic">Épique</span>
+            </div>
+            <div class="oeuvre-card">
+                <img src="image/Main_b2c65d40-43fa-41e4-9ff3-7c2b6685f916_720x.webp" alt="Les Nymphéas">
+                <h3>Les Nymphéas</h3>
+                <p>Claude Monet</p>
+                <span class="rarity rare">Rare</span>
+            </div>
+            <div class="oeuvre-card">
+                <img src="image/Pierre-Auguste_Renoir_-_Le_Déjeuner_des_canotiers.jpg" alt="Le Déjeuner des canotiers">
+                <h3>Le Déjeuner des canotiers</h3>
+                <p>Pierre-Auguste Renoir</p>
+                <span class="rarity common">Commune</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="floating-exchange-btn" id="exchangeBtn">
+        <span> Échanger</span>
+    </div>
+
+   
+    <div class="exchange-modal" id="exchangeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Échanger une carte</h2>
+            <form class="exchange-form">
+                <div class="form-group">
+                    <label for="receiver">Destinataire :</label>
+                    <select id="receiver" name="receiver" required>
+                        <option value="">-- Sélectionnez un utilisateur --</option>
+                        <option value="user1">Christine Miraculus</option>
+                        <option value="user2">Jean Paul Dior</option>
+                        <option value="user3">Marie Antoinette</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="card-to-give">Carte à donner :</label>
+                    <select id="card-to-give" name="card-to-give" required>
+                        <option value="">-- Sélectionnez une carte --</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="button">Proposer l'échange</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="#"><p>Mentions légales</p></a>
+        <a href="#"><p>Conditions d'utilisation</p></a>
+        <a href="#"><p>Contact</p></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="collection.js"></script>
+    <script src="swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="dark-mode.js" defer></script>    
+    <script src="mobile-menu.js" defer></script>
+    <script src="echanger.js" defer></script>
+</body>
+</html>
